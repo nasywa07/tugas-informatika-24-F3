@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>🎮 Rock Paper Scissors</h1>
+            <p class="subtitle">Mainkan melawan Komputer!</p>
+        </div>
+
+        <div class="score-board">
+            <div class="score-item">
+                <h3>Kamu</h3>
+                <div class="score" id="playerScore">0</div>
+            </div>
+            <div class="score-item">
+                <h3>Komputer</h3>
+                <div class="score" id="computerScore">0</div>
+            </div>
+            <div class="score-item">
+                <h3>Seri</h3>
+                <div class="score" id="drawScore">0</div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="choices-container">
+                <div class="choice-section">
+                    <h3>Pilihan Kamu</h3>
+                    <div class="choices">
+                        <button class="choice-btn" data-choice="batu">
+                            <span class="emoji">🪨</span>
+                            <span class="label">Batu</span>
+                        </button>
+                        <button class="choice-btn" data-choice="kertas">
+                            <span class="emoji">📄</span>
+                            <span class="label">Kertas</span>
+                        </button>
+                        <button class="choice-btn" data-choice="gunting">
+                            <span class="emoji">✂️</span>
+                            <span class="label">Gunting</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="result-display">
+                    <div class="player-choice" id="playerChoice">
+                        <div class="choice-emoji">?</div>
+                        <div class="choice-name">Menunggu...</div>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="computer-choice" id="computerChoice">
+                        <div class="choice-emoji">?</div>
+                        <div class="choice-name">Menunggu...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="result-message" id="resultMessage">Pilih salah satu pilihan untuk mulai!</div>
+                <div class="result-detail" id="resultDetail"></div>
+            </div>
+        </div>
+
+        <button class="reset-btn" onclick="resetGame()">🔄 Reset Skor</button>
+
+        <div class="rules">
+            <h4>Aturan Permainan:</h4>
+            <ul>
+                <li>🪨 Batu mengalahkan ✂️ Gunting</li>
+                <li>📄 Kertas mengalahkan 🪨 Batu</li>
+                <li>✂️ Gunting mengalahkan 📄 Kertas</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
